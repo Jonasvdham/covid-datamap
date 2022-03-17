@@ -9,3 +9,6 @@ apikey
 node_modules/
 Tutorials/
 mapbox/
+npm-debug.log
+.DS_Store
+/*.env
