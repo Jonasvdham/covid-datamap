@@ -5,12 +5,11 @@ Implementation of vue-datamaps package from
 $ git clone https://github.com/Seungwoo321/vue-datamaps.git
 #+end_src
 
-The main application is built in ~/vue-datamaps/demo/example-vue-cli3/
+Using data from OWID: https://github.com/owid/covid-19-data
 
 * Install / run
 
 #+begin_src
-$ cd vue-datamaps/demo/example-vue-cli3/
 $ npm install
 $ npm run serve
 #+end_src
