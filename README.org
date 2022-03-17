@@ -16,4 +16,4 @@ $ npm run serve
 
 * Demo
 
-file:covid-datamap.png
+[[file:covid-datamap.png]]
