@@ -1,0 +1,11 @@
+*.pdf
+*.jpg
+*.png
+*.gif
+*.mp4
+*.svg
+apikey
+\#* # Emacs backup files
+node_modules/
+Tutorials/
+mapbox/
