@@ -1,0 +1,16 @@
+* Vue Datamaps application
+
+Implementation of vue-datamaps package from
+#+begin_src
+$ git clone https://github.com/Seungwoo321/vue-datamaps.git
+#+end_src
+
+The main application is built in ~/vue-datamaps/demo/example-vue-cli3/
+
+* Install / run
+
+#+begin_src
+$ cd vue-datamaps/demo/example-vue-cli3/
+$ npm install
+$ npm run serve
+#+end_src
