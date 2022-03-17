@@ -13,3 +13,7 @@ Using data from OWID: https://github.com/owid/covid-19-data
 $ npm install
 $ npm run serve
 #+end_src
+
+* Demo
+
+file:covid-datamap.png
