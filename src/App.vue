@@ -41,84 +41,8 @@
 import DatamapsCustomColor from '@/components/DatamapsCustomColor'
 import { csv } from 'd3-fetch'
 import * as d3 from 'd3v4'
-//import {select} from 'd3-selection'
-//import legend from 'd3-svg-legend'
-// import * as fc from 'd3fc'
 import { interpolateReds , interpolateBlues } from 'd3-scale-chromatic'
 import VueSlideBar from 'vue-slide-bar'
-
-// function legend({
-//   color,
-//   title,
-//   tickSize = 6,
-//   width = 320,
-//   height = 44 + tickSize,
-//   marginTop = 18,
-//   marginRight = 0,
-//   marginBottom = 16 + tickSize,
-//   marginLeft = 0,
-//   ticks = width / 64,
-//   tickFormat,
-//   tickValues
-// } = {}) {
-//   const svg = d3.select("svg")
-//     .attr("width", width)
-//     .attr("height", height)
-//     .attr("viewBox", [0, 0, width, height])
-//     .style("overflow", "visible")
-//     .style("display", "block");
-
-//   let tickAdjust = g => g.selectAll(".tick line").attr("y1", marginTop + marginBottom - height);
-//   let x;
-//   // Continuous
-//   if (true) {
-//     console.log(color)
-//     console.log(color.domain())
-    
-//     const n = Math.min(color.domain()[length]);
-
-//     x = color.copy().rangeRound(d3.quantize(d3.interpolate(marginLeft, width - marginRight), n));
-
-//     svg.append("image")
-//       .attr("x", marginLeft)
-//       .attr("y", marginTop)
-//       .attr("width", width - marginLeft - marginRight)
-//       .attr("height", height - marginTop - marginBottom)
-//       .attr("preserveAspectRatio", "none")
-//       .attr("xlink:href", ramp(color.copy().domain(d3.quantize(d3.interpolate(0, 1), n))).toDataURL());
-//   }
-
-//   svg.append("g")
-//     .attr("transform", `translate(0,${height - marginBottom})`)
-//     .call(d3.axisBottom(x)
-//       .ticks(ticks, typeof tickFormat === "string" ? tickFormat : undefined)
-//       .tickFormat(typeof tickFormat === "function" ? tickFormat : undefined)
-//       .tickSize(tickSize)
-//       .tickValues(tickValues))
-//     .call(tickAdjust)
-//     .call(g => g.select(".domain").remove())
-//     .call(g => g.append("text")
-//       .attr("x", marginLeft)
-//       .attr("y", marginTop + marginBottom - height - 6)
-//       .attr("fill", "currentColor")
-//       .attr("text-anchor", "start")
-//       .attr("font-weight", "bold")
-//       .text(title));
-
-//   return svg.node();
-// }
-
-// function ramp(color, n = 256) {
-//   var canvas = document.createElement('canvas');
-//   canvas.width = n;
-//   canvas.height = 1;
-//   const context = canvas.getContext("2d");
-//   for (let i = 0; i < n; ++i) {
-//     context.fillStyle = color(i / (n - 1));
-//     context.fillRect(i, 0, 1, 1);
-//   }
-//   return canvas;
-// }
 
 var r = document.querySelector(':root');
 
@@ -276,9 +200,6 @@ export default {
     csv('data/monthly_covid_data.csv').then(data => {
       this.rawData = data
     })
-    // let d3Legend = document.createElement('script')
-    // d3Legend.setAttribute('src', "https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js")
-    // document.head.appendChild(d3Legend)
   },
   computed: {
     mapData () {
@@ -287,10 +208,6 @@ export default {
       }
       else {
         let data = this.filterData()
-        // legend({
-        //   color: d3.scaleSequential([0, 100], d3.interpolateViridis),
-        //   title: "Temperature (°F)"
-        // })
         return data
       }
     },
